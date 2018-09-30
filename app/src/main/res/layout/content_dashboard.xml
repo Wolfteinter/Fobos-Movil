@@ -10,6 +10,7 @@
     android:background="@color/fondo">
 
     <TableLayout
+        android:paddingTop="70dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
@@ -18,18 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight=".1"
-            >
-            <TextView
-                android:paddingTop="20dp"
-                android:id="@+id/texto"
-                android:layout_height="100dp"
-                android:layout_span="2"
-                android:text="Dashbord"
-                android:textSize="50dp"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                />
-        </TableRow>
+            ></TableRow>
         <TableRow
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -44,6 +34,7 @@
 
                 android:backgroundTint="@color/neutral"
                 android:text="Demo"
+                android:textColor="#ffffff"
                 android:textSize="30dp" />
 
             <Button
@@ -53,6 +44,7 @@
                 android:layout_height="94dp"
                 android:backgroundTint="@color/neutral"
                 android:text="Demo"
+                android:textColor="#ffffff"
                 android:textSize="30dp" />
 
         </TableRow>
@@ -69,6 +61,7 @@
                 android:layout_height="94dp"
                 android:backgroundTint="@color/neutral"
                 android:text="Demo"
+                android:textColor="#ffffff"
                 android:textSize="30dp" />
 
             <Button
@@ -78,6 +71,7 @@
                 android:layout_height="94dp"
                 android:backgroundTint="@color/neutral"
                 android:text="Demo"
+                android:textColor="#ffffff"
                 android:textSize="30dp" />
 
         </TableRow>
@@ -95,6 +89,7 @@
                 android:layout_height="94dp"
                 android:backgroundTint="@color/neutral"
                 android:text="Demo"
+                android:textColor="#ffffff"
                 android:textSize="30dp" />
 
             <Button
@@ -104,6 +99,7 @@
                 android:layout_height="94dp"
                 android:backgroundTint="@color/neutral"
                 android:text="Demo"
+                android:textColor="#ffffff"
                 android:textSize="30dp" />
 
         </TableRow>
@@ -122,31 +118,36 @@
                     android:paddingRight="20dp"
                     android:paddingLeft="10dp"
                     android:paddingBottom="10dp">
+
                     <Button
-                        android:onClick="onClick"
                         android:id="@+id/sug"
                         android:layout_width="160dp"
                         android:layout_height="84dp"
-                        android:backgroundTint="@color/verdefuerte"
-                        android:text="Sugerencias"
-                        android:textSize="18dp"
                         android:background="@drawable/borde_redondo"
-                        />
+                        android:backgroundTint="@color/verdefuerte"
+                        android:onClick="onClick"
+                        android:text="Sugerencias"
+                        android:textAllCaps="false"
+                        android:textColor="#ffffff"
+                        android:textSize="18dp" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content">
+
                     <Button
 
                         android:id="@+id/quejas"
                         android:layout_width="160dp"
                         android:layout_height="84dp"
+                        android:background="@drawable/borde_redondo"
                         android:backgroundTint="@color/naranga"
                         android:text="Quejas"
-                        android:textSize="18dp"
-                        android:background="@drawable/borde_redondo"/>
+                        android:textAllCaps="false"
+                        android:textColor="#ffffff"
+                        android:textSize="18dp" />
                     />
 
                 </LinearLayout>

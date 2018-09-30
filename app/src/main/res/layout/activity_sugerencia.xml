@@ -44,7 +44,7 @@
         android:layout_marginTop="10dp"
         android:backgroundTint="@color/colorPrimaryDark"
         android:gravity="top"
-        android:hint="Tu queja"
+        android:hint="Tu sugerencia"
         android:fitsSystemWindows="true"
         android:breakStrategy="balanced"
         android:inputType="textMultiLine"

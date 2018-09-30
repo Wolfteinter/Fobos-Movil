@@ -3,11 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="amarillo">#FFBB00</color>
+    <color name="amarillo">#f44336</color>
     <color name="verdeclaro">#3F681C</color>
     <color name="naranga">#FB6542</color>
-    <color name="neutral">#798F8C</color>
-    <color name="verdefuerte">#19731a</color>
+    <color name="neutral">#1ebea5</color>
+    <color name="verdefuerte">#2196F3</color>
     <color name="score">#8d8d76</color>
-    <color name="fondo">#a9a99c</color>
+    <color name="fondo">#f1f1f1</color>
 </resources>
