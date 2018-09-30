@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -24,6 +25,7 @@ public class sugerencia extends AppCompatActivity implements View.OnClickListene
     Button btnEnviar;
     EditText inputDescripcion;
     EditText inputRuta;
+    EditText inputHashTag;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +34,7 @@ public class sugerencia extends AppCompatActivity implements View.OnClickListene
         db = FirebaseFirestore.getInstance();
         inputDescripcion=(EditText)findViewById(R.id.descripcion2);
         inputRuta=(EditText)findViewById(R.id.ruta2);
+        inputHashTag=findViewById(R.id.hashtag2);
         btnEnviar=findViewById(R.id.enviar2);
 
         btnEnviar.setOnClickListener(this);
@@ -39,10 +42,12 @@ public class sugerencia extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public void onClick(View view) {
-        Map<String,String> data = new HashMap<>();
+        Map<String,Object> data = new HashMap<>();
         data.put("Tipo","Sugerencia");
         data.put("Descripcion",inputDescripcion.getText().toString());
         data.put("Ruta",inputRuta.getText().toString());
+        data.put("HashTag",inputHashTag.getText().toString());
+        data.put("Fecha", FieldValue.serverTimestamp());
 
         db.collection("emisiones")
                 .add(data)
@@ -62,6 +67,7 @@ public class sugerencia extends AppCompatActivity implements View.OnClickListene
                 });
         inputRuta.setText(" ");
         inputDescripcion.setText(" ");
+        inputHashTag.setText(" ");
         Toast.makeText(this,"Se añadido correctamente",Toast.LENGTH_SHORT).show();
     }
 }

@@ -1,74 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".queja"
+    android:background="@color/fondo"
     android:orientation="vertical"
-    android:background="@color/fondo">
-
-
-    <EditText
-        android:id="@+id/descripcion"
-        android:layout_width="242dp"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textAlignment="center"/>
+    android:padding="16dp">
 
     <TextView
-
+        android:id="@+id/contact_form_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="209dp"
-        android:text="Descripcion"
-        android:textSize="20dp" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="5dp"
+        android:text="Quejas"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:typeface="serif" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="119dp"
-        android:text="Ruta"
-        android:textSize="20dp" />
 
     <EditText
         android:id="@+id/ruta"
-        android:layout_width="127dp"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="156dp"
-        android:textAlignment="center"/>
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:hint="Ruta"
+         />
 
+    <EditText
+        android:id="@+id/hashtag"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:hint="#HashTag"
+         />
+
+    <EditText
+        android:id="@+id/descripcion"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:gravity="top"
+        android:hint="Tu queja"
+        android:fitsSystemWindows="true"
+        android:breakStrategy="balanced"
+        android:inputType="textMultiLine"
+        android:singleLine="false"
+        android:padding="5dp" />
 
     <Button
         android:id="@+id/enviar"
-        android:layout_width="206dp"
-        android:layout_height="72dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/borde_redondo"
-        android:backgroundTint="@color/verdefuerte"
-        android:text="Enviar"
-        android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-
-        android:layout_marginTop="29dp"
-        android:text="Quejas"
-        android:textSize="36sp"
-        tools:text="Quejas" />
-
-
-</RelativeLayout>
+        android:layout_gravity="center_horizontal"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="4dp"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp"
+        android:text="Enviar"
+        android:textColor="#fff"
+        />
+</LinearLayout>

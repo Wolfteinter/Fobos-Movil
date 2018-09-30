@@ -14,10 +14,15 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.ServerTimestamp;
 
+import java.text.SimpleDateFormat;
 import java.util.Collection;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 import static com.google.android.gms.common.internal.safeparcel.SafeParcelable.NULL;
@@ -29,6 +34,7 @@ public class queja extends AppCompatActivity implements View.OnClickListener {
     Button btnEnviar;
     EditText inputDescripcion;
     EditText inputRuta;
+    EditText inputHashTag;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +44,7 @@ public class queja extends AppCompatActivity implements View.OnClickListener {
         db = FirebaseFirestore.getInstance();
         inputDescripcion=(EditText)findViewById(R.id.descripcion);
         inputRuta=(EditText)findViewById(R.id.ruta);
+        inputHashTag=findViewById(R.id.hashtag);
         btnEnviar=findViewById(R.id.enviar);
 
         btnEnviar.setOnClickListener(this);
@@ -47,10 +54,15 @@ public class queja extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        Map<String,String> data = new HashMap<>();
+
+
+
+        Map<String,Object> data = new HashMap<>();
         data.put("Tipo","Queja");
         data.put("Descripcion",inputDescripcion.getText().toString());
         data.put("Ruta",inputRuta.getText().toString());
+        data.put("HashTag",inputHashTag.getText().toString());
+        data.put("Fecha", FieldValue.serverTimestamp());
 
         db.collection("emisiones")
                 .add(data)
@@ -71,6 +83,8 @@ public class queja extends AppCompatActivity implements View.OnClickListener {
 
         inputRuta.setText(" ");
         inputDescripcion.setText(" ");
+        inputHashTag.setText(" ");
+
         Toast.makeText(this,"Se añadido correctamente",Toast.LENGTH_SHORT).show();
 
     }

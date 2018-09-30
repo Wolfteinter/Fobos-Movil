@@ -1,5 +1,6 @@
 package com.example.wolfteinter.fobosapp;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,6 +30,9 @@ public class quejasLista extends AppCompatActivity {
     String descripcion;
     String resultado;
     String tipo;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,8 +65,7 @@ public class quejasLista extends AppCompatActivity {
                                     descripcion=arregloStrings[2];
                                     objetosLista.add(new classQueja("2","prueba"));
                                     //objetosLista.add(new classQueja(ruta,"hola"));
-
-                                    Toast.makeText(quejasLista.this, objetosLista.get(1).getDescripcion(), Toast.LENGTH_SHORT).show();
+                                    //Toast.makeText(quejasLista.this, objetosLista.get(1).getDescripcion(), Toast.LENGTH_SHORT).show();
                                 }
 
 
