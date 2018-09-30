@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "235542742143",
+    "firebase_url": "https://fobos-11b8f.firebaseio.com",
+    "project_id": "fobos-11b8f",
+    "storage_bucket": "fobos-11b8f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235542742143:android:f491cc70885e2759",
+        "android_client_info": {
+          "package_name": "com.example.wolfteinter.fobosapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "235542742143-i946novce6vdqlhscg2ko7auo1qmur53.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wolfteinter.fobosapp",
+            "certificate_hash": "932b211b0208ee0d0907efd4af8010f514b5c811"
+          }
+        },
+        {
+          "client_id": "235542742143-4sdgr3tek721cdrrftgnf7u3mrj8gts0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPbYJjYUSS6DD0GMYrAV6BoZ4tHnexofQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "235542742143-4sdgr3tek721cdrrftgnf7u3mrj8gts0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "235542742143-nlea6lq46u0padort5l8c7pu5fcf6ono.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.wolfteinter.fobosapp"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
